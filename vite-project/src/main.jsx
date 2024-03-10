@@ -32,6 +32,8 @@ const Footer = () => {
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleAdminLogin = () => {
     setShowModal(true);
@@ -41,7 +43,17 @@ const App = () => {
     setShowModal(false);
   }
 
-  const imagePath = "file:///C:/Users/91760/Desktop/Tarika-Arun-How-an-employee-database-management-system-improves-your-business.jpg";
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    // Handle login logic here with username and password state
+    console.log('Username:', username);
+    console.log('Password:', password);
+    // Close modal after handling login
+    setShowModal(false);
+    // Optionally, reset username and password fields
+    setUsername('');
+    setPassword('');
+  }
 
   return (
     <div className='full'>
@@ -52,12 +64,12 @@ const App = () => {
           <div className="modal-content">
             <span className="close" onClick={closeModal}>&times;</span>
             <h2>Login</h2>
-            <form>
+            <form onSubmit={handleFormSubmit}>
               <label htmlFor="username">Username:</label>
-              <input type="text" id="username" name="username" />
+              <input type="text" id="username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} />
               <br />
               <label htmlFor="password">Password:</label>
-              <input type="password" id="password" name="password" />
+              <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
               <br />
               <button type="submit">Login</button>
             </form>
@@ -69,4 +81,3 @@ const App = () => {
 }
 
 root.render(<App />);
-  
