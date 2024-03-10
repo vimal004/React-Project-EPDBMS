@@ -41,14 +41,19 @@
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Drop shadow effect */
-  max-width: 80%;
-  max-height: 80%; /* Adjust max-height as needed */
-  overflow: auto; /* Add scrollbars if content exceeds max-height */
-  display: flex; /* Center content */
-  flex-direction: column; /* Stack content vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /*Dropshadoweffect*/max-width: 20%;
+  max-height: 80%;
+  /*Adjustmax-heightasneeded*/overflow: auto;
+  /*Addscrollbarsifcontentexceedsmax-height*/display: flex;
+  /*Centercontent*/flex-direction: column;
+  /*Stackcontentvertically*/justify-content: center;
+  /*Centercontentvertically*/align-items: center;
+   /* Center content horizontally */:;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
 }
 
 .close {
